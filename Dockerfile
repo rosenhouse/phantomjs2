@@ -4,5 +4,7 @@ RUN apt-get update && apt-get install -y wget unzip build-essential g++ flex bis
 
 RUN mkdir phantomjs && cd phantomjs && wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-source.zip && unzip phantomjs-2.0.0-source.zip
 
+RUN apt-get install -y libqt5webkit5-dev python
+
 RUN cd phantomjs/phantomjs-2.0.0/ && yes | ./build.sh
 CMD ["/bin/bash"]

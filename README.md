@@ -1,8 +1,8 @@
 A Dockerfile to build [PhantomJS](https://github.com/ariya/phantomjs) 2.0.0 for Linux from source.
 
-There is a [Trusted build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/)
+There is an [Automated Build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/)
 
-## To get the pre-built binary from the Trusted Build
+## To get the pre-built binary from the Automated Build
 ```bash
 docker pull rosenhouse/phantomjs2
 docker run -name temp rosenhouse/phantomjs2

@@ -3,6 +3,7 @@ A Dockerfile to build [PhantomJS](https://github.com/ariya/phantomjs) 2.0.0 for 
 There is an [Automated Build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/)
 
 ## To get the pre-built binary from the Automated Build
+
 ```bash
 docker pull rosenhouse/phantomjs2
 docker run -name temp rosenhouse/phantomjs2
@@ -11,6 +12,7 @@ docker cp temp:phantomjs/phantomjs-2.0.0/bin/phantomjs ~/phantomjs
 
 ## To run the binary
 You may need to install some dynamic libraries on your system before `phantomjs` will run:
+
 ```bash
 sudo apt-get install libfontconfig1-dev libjpeg-dev
 ```

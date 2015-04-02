@@ -33,7 +33,7 @@ RUN \
 &&  apt-get purge -yqq ${buildDependencies} \
 &&  apt-get autoremove -yqq \
 &&  apt-get clean \
-&&  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+&&  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     # Checking if phantom works
 &&  phantomjs -v
 

@@ -4,7 +4,8 @@ A Dockerfile to build [PhantomJS](https://github.com/ariya/phantomjs) 2.0.0 for 
 
 ## How do I get the image?
 There is an [Automated Build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/), so getting the image is easy:
-```bash
+
+```
 docker pull rosenhouse/phantomjs2:latest
 ```
 
@@ -21,22 +22,19 @@ docker run rosenhouse/phantomjs2 phantomjs -v
 
 1. Install [run-time dependencies](https://github.com/rosenhouse/phantomjs2/blob/master/Dockerfile#L10)
 
-  ```bash
-  apt-get install -y libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6
-  ```
+        apt-get install -y libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6
+
 
 2. Extract binary
 
-  ```bash
-  docker pull rosenhouse/phantomjs2:latest
-  docker run -name temp rosenhouse/phantomjs2
-  docker cp temp:phantomjs/phantomjs-2.0.0/bin/phantomjs ~/phantomjs
-  ```
+        docker pull rosenhouse/phantomjs2:latest
+        docker run -name temp rosenhouse/phantomjs2
+        docker cp temp:phantomjs/phantomjs-2.0.0/bin/phantomjs ~/phantomjs
+
 
 3. Run
 
-  ```bash
-  ~/phantomjs -v
-  2.0.0
-  ```
+        ~/phantomjs -v
+        2.0.0
+
      

@@ -16,8 +16,6 @@ docker run rosenhouse/phantomjs2 phantomjs -v
 
 ## Option 2: Extract the binary so you can run it without Docker
 
-*If you want to run PhantomJS without Docker*
-
 1. Install [run-time dependencies](https://github.com/rosenhouse/phantomjs2/blob/master/Dockerfile#L10)
 
   ```bash

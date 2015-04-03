@@ -1,20 +1,23 @@
+# Docker-ized PhantomJS 2
+
 A Dockerfile to build [PhantomJS](https://github.com/ariya/phantomjs) 2.0.0 for Linux from source.
 
+## How do I get the image?
 There is an [Automated Build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/), so getting the image is easy:
 ```bash
 docker pull rosenhouse/phantomjs2:latest
 ```
 
-There are a couple ways to use it:
+## How do I use it?
 
-## Option 1: Run it from inside a Docker container
+#### Option 1: Run it from inside a Docker container
 
 ```bash
 docker run rosenhouse/phantomjs2 phantomjs -v
 ```
 
 
-## Option 2: Extract the binary so you can run it without Docker
+#### Option 2: Extract the binary so you can run it without Docker
 
 1. Install [run-time dependencies](https://github.com/rosenhouse/phantomjs2/blob/master/Dockerfile#L10)
 

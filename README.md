@@ -1,19 +1,41 @@
 A Dockerfile to build [PhantomJS](https://github.com/ariya/phantomjs) 2.0.0 for Linux from source.
 
-There is an [Automated Build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/)
-
-## To get the pre-built binary from the Automated Build
-
+There is an [Automated Build on hub.docker.com](https://registry.hub.docker.com/u/rosenhouse/phantomjs2/), so getting the image is easy:
 ```bash
-docker pull rosenhouse/phantomjs2
-docker run -name temp rosenhouse/phantomjs2
-docker cp temp:phantomjs/phantomjs-2.0.0/bin/phantomjs ~/phantomjs
+docker pull rosenhouse/phantomjs2:latest
 ```
 
-## To run the binary
-You may need to install some dynamic libraries on your system before `phantomjs` will run:
+There are a couple ways to use it:
+
+## Option 1: Run it from inside a Docker container
 
 ```bash
-sudo apt-get install libfontconfig1-dev libjpeg-dev
+docker run rosenhouse/phantomjs2 phantomjs -v
 ```
-When in doubt, compare your system against the packages used in the build process at the top of the `Dockerfile`
+
+
+## Option 2: Extract the binary so you can run it without Docker
+
+*If you want to run PhantomJS without Docker*
+
+1. Install [run-time dependencies](https://github.com/rosenhouse/phantomjs2/blob/master/Dockerfile#L10)
+
+  ```bash
+  apt-get install -y libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6
+  ```
+
+2. Extract binary
+
+  ```bash
+  docker pull rosenhouse/phantomjs2:latest
+  docker run -name temp rosenhouse/phantomjs2
+  docker cp temp:phantomjs/phantomjs-2.0.0/bin/phantomjs ~/phantomjs
+  ```
+
+3. Run
+
+  ```bash
+  ~/phantomjs -v
+  2.0.0
+  ```
+     

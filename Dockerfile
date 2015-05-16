@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:latest
 
 # Dependencies we just need for building phantomjs
 ENV buildDependencies\
@@ -7,7 +7,7 @@ ENV buildDependencies\
 
 # Dependencies we need for running phantomjs
 ENV phantomJSDependencies\
-  libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6
+  libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6 openssl
 
 # Installing phantomjs
 RUN \

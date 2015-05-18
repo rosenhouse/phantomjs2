@@ -22,7 +22,7 @@ docker run rosenhouse/phantomjs2 phantomjs -v
 
 1. Install [run-time dependencies](https://github.com/rosenhouse/phantomjs2/blob/master/Dockerfile#L10)
 
-        apt-get install -y libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6
+        apt-get install -y libicu-dev libfontconfig1-dev libjpeg-dev libfreetype6 openssl
 
 
 2. Extract binary
